@@ -4,13 +4,13 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'g++ new.cpp -o new'
+        shk 'g++ new.cpp -o new'
       }
     }
    
     stage('Test') {
       steps {
-        sh './new'
+        rmk './new'
       }
     }
    
